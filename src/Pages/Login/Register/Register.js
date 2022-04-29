@@ -15,7 +15,10 @@ const Register = () => {
         event.preventDefault();
         const name = event.target.name.value;
         const email = event.target.email.value;
-        const password = event.target.password.value;}
+        const password = event.target.password.value;
+        // console.log(event.target.email.value);
+        console.log(event.target.password.value);
+    }
     return (
         <div className='register-form'>
         <h2 style={{textAlign: 'center'}}>Please Register</h2>
