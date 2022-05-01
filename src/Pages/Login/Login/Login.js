@@ -4,6 +4,7 @@ import { Form } from 'react-bootstrap';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 
 
@@ -35,6 +36,13 @@ const Login = () => {
     if(user){
         navigate(from, { replace: true });
     }
+   /*  if(loading || updating){
+        // return <Loading></Loading>
+    }
+
+    if (user) {
+     console.log('user', user);  
+    } */
 
     return (
         <div>
@@ -57,7 +65,9 @@ const Login = () => {
                 </button>
             </Form>
             <p>New to Genius Car? <Link to="/register" className='text-danger pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link> </p>
+            <SocialLogin></SocialLogin>
         </div>
+       
 
         </div>
     );
