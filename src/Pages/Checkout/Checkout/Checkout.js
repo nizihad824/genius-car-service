@@ -67,7 +67,7 @@ const Checkout = () => {
                 <form onSubmit={handlePlaceOrder}>
                 <input className='w-100 mb-2' type="text" value={user?.displayName}  name="name" placeholder='name' required readOnly disabled/>
                 <br />
-                <input className='w-100 mb-2' type="email" value={user.email} name="email" placeholder='email' required readOnly disabled />
+                <input className='w-100 mb-2' type="email" value={user?.email} name="email" placeholder='email' required readOnly disabled />
                 <br />
                 <input className='w-100 mb-2' type="text" value={service.name} name="service" placeholder='service' required readOnly />
                 <br />
